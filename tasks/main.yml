@@ -1,0 +1,17 @@
+---
+# tasks file for ansible-role-hello-world-k8s
+
+- name: "Get information about the cluster"
+ set_fact:
+ api_groups: ""
+
+- name: 'Set hello-world objects state='
+ k8s:
+ state: ''
+ definition: ""
+ when: item.api_exists | default(True)
+ loop:
+ - name: deployment.yml.j2
+ - name: service.yml.j2
+ - name: route.yml.j2
+ api_exists: "false"
