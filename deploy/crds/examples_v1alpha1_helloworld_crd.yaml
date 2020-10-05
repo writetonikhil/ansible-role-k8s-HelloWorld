@@ -1,0 +1,15 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: helloworlds.examples.nikhilk.io
+spec:
+  group: examples.nikhilk.io
+  names:
+    kind: HelloWorld
+    listKind: HelloWorldList
+    plural: helloworlds
+    singular: helloworld
+  scope: Namespaced
+  version: v1alpha1
+  subresources:
+    status: {}
