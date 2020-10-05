@@ -1,0 +1,18 @@
+---
+apiVersion: v1
+ kind: Service
+ metadata:
+ name: Reaching for the Stars with Ansible Operator
+ namespace: 
+ labels:
+ app: Reaching for the Stars with Ansible Operator
+ service: Reaching for the Stars with Ansible Operator
+ spec:
+ ports:
+ - name: web
+ port: 8080
+ protocol: TCP
+ targetPort: 8080
+ selector:
+ app: Reaching for the Stars with Ansible Operator
+ service: Reaching for the Stars with Ansible Operator
