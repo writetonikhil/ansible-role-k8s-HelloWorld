@@ -1,0 +1,31 @@
+---
+
+ apiVersion: apps/v1
+ kind: Deployment
+
+ metadata:
+ name: Reaching for the Stars with Ansible Operator
+ namespace: 
+ labels:
+ app: Reaching for the Stars with Ansible Operator
+ service: Reaching for the Stars with Ansible Operator
+ spec:
+ replicas: 
+ 
+ selector:
+ matchLabels:
+ app: Reaching for the Stars with Ansible Operator
+ service: Reaching for the Stars with Ansible Operator
+ 
+ template:
+ metadata:
+ labels:
+ app: Reaching for the Stars with Ansible Operator
+ service: Reaching for the Stars with Ansible Operator
+ spec:
+ containers:
+ - image: 
+ name: hello-world
+ ports:
+ - containerPort: 8080
+ protocol: TCP
