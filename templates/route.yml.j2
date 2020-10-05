@@ -1,0 +1,15 @@
+---
+apiVersion: route.openshift.io/v1
+ kind: Route
+ metadata:
+ name: Reaching for the Stars with Ansible Operator
+ namespace: 
+ labels:
+ app: Reaching for the Stars with Ansible Operator
+ service: Reaching for the Stars with Ansible Operator
+ spec:
+ port:
+ targetPort: web
+ to:
+ kind: Service
+ name: Reaching for the Stars with Ansible Operator
