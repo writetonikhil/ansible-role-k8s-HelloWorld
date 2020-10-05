@@ -1,0 +1,17 @@
+---
+# defaults file for ansible-role-hello-world-k8s
+# NOTE: meta.name(space) comes from CR metadata when run with Ansible Operator
+# deploy/crds has an example CR for reference
+#
+
+name: "hello-world"
+namespace: "hello-world-ns"
+
+image: docker.io/ansibleplaybookbundle/hello-world:latest
+
+# To uninstall from the cluster
+ # state: absent
+ state: present
+
+# The size of the hello-world deployment
+ size: 1
